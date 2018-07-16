@@ -12,7 +12,7 @@ mvnHome = tool 'M3'
       }
     //}
    }
-   stage ('Results')
+   stage ('Results') {
      junit '**/target/surefire-reports/TEST-*.xml'
      archive 'target/*.jar'
    }
