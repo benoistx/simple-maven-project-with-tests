@@ -1,7 +1,7 @@
 node ('master') {
    checkout scm
    def mvnHome
-mvnHome = tool 'M3'
+   mvnHome = tool 'M3'
    stage ('Build') {
       //withMaven(maven: 'M3') {
       if (isUnix()) {
@@ -12,7 +12,7 @@ mvnHome = tool 'M3'
       }
     //}
    }
-   stage ('Results')
+   stage ('Results') {
      junit '**/target/surefire-reports/TEST-*.xml'
      archive 'target/*.jar'
    }
