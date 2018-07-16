@@ -1,7 +1,7 @@
 node ('master') {
    checkout scm
    def mvnHome
-mvnHome = tool 'M3'
+   mvnHome = tool 'M3'
    stage ('Build') {
       //withMaven(maven: 'M3') {
       if (isUnix()) {
